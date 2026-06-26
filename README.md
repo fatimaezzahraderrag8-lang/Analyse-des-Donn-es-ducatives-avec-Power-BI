@@ -191,6 +191,7 @@ Création d'une table calendrier (**DimDate**) pour les analyses temporelles.
 ## 📊 Dashboard
 <img width="1137" height="634" alt="image" src="https://github.com/user-attachments/assets/209b4734-a071-48d1-9a0f-ca31d8450b13" />
 <img width="1138" height="632" alt="image" src="https://github.com/user-attachments/assets/cdb28bf2-166c-4546-917c-1bd10a3cda55" />
-<img width="1132" height="634" alt="image" src="https://github.com/user-attachments/assets/bf2321df-67f4-4ec4-9713-5abe8e89e2d3" />
+<img width="1139" height="634" alt="image" src="https://github.com/user-attachments/assets/3013699f-17e7-4485-b2d8-bd9e705d3c7f" />
+
 
 
