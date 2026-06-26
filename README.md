@@ -1,4 +1,3 @@
-# Analyse-des-Donnees-educatives-avec-Power-BI
 # 📊 Analyse des Données Éducatives avec Power BI
 
 ## 📌 Description du projet
