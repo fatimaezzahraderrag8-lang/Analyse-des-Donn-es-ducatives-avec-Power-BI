@@ -1,199 +1,215 @@
 # 📊 Analyse des Données Éducatives avec Power BI
 
-## 📌 Description du projet
+---
 
-Ce projet consiste à analyser des données éducatives provenant d'un établissement scolaire fictif à l'aide de **Power BI**. L'objectif est de nettoyer, transformer, modéliser et visualiser les données afin de produire un tableau de bord décisionnel interactif permettant de suivre les performances académiques des élèves, la charge de travail des enseignants et l'efficacité des cours.
+# 1. Nom du projet
+
+**Analyse des Données Éducatives avec Power BI**
 
 ---
 
-## 🎯 Objectifs du projet
+# 2. Présentation du projet
 
-* Analyser les performances académiques des élèves.
-* Étudier l'impact de l'absentéisme sur les résultats scolaires.
-* Évaluer la charge de travail et la performance des enseignants.
-* Mesurer le taux de réalisation des cours et le taux de réussite.
-* Concevoir un dashboard interactif facilitant la prise de décision.
+Ce projet consiste à analyser les données d'un établissement scolaire fictif à l'aide de **Power BI** afin de produire un tableau de bord décisionnel interactif.
 
----
+Il s'adresse principalement aux responsables pédagogiques, aux enseignants et aux décideurs souhaitant suivre les performances académiques des élèves, la charge de travail des enseignants et l'efficacité des cours.
 
-## 📂 Jeux de données
-
-### students.csv
-
-Contient les informations relatives aux élèves :
-
-* Identifiant de l'élève
-* Nom complet
-* Date de naissance
-* Genre
-* Date d'inscription
-* Niveau scolaire
-* Section
-* Statut
-* Moyenne générale
-* Nombre d'absences
-* Professeur principal
-
-### teachers.csv
-
-Contient les informations relatives aux enseignants :
-
-* Identifiant de l'enseignant
-* Nom complet
-* Date d'embauche
-* Matière enseignée
-* Département pédagogique
-* Niveau attribué
-* Type de contrat
-* Heures hebdomadaires
-* Ville
-* Note d'évaluation
-
-### courses.csv
-
-Contient les informations relatives aux cours :
-
-* Identifiant du cours
-* Nom du cours
-* Enseignant responsable
-* Élève concerné
-* Semestre
-* Année scolaire
-* Heures prévues
-* Heures réalisées
-* Note obtenue
-* Résultat (Réussi / Échoué)
+Son objectif principal est de transformer des données brutes en informations exploitables pour faciliter la prise de décision.
 
 ---
 
-## 🛠️ Technologies utilisées
+# 3. Problématique
 
-* Power BI Desktop
-* Power Query
-* DAX (Data Analysis Expressions)
-* Modélisation de données
-* Visualisation de données
+Les établissements scolaires disposent de nombreuses données concernant les élèves, les enseignants et les cours. Cependant, ces informations sont souvent dispersées dans plusieurs fichiers, ce qui rend leur analyse difficile.
+
+La solution proposée permet de nettoyer, transformer, modéliser et visualiser ces données dans Power BI afin de suivre les indicateurs de performance et d'aider les responsables pédagogiques à prendre de meilleures décisions.
 
 ---
 
-## 🔄 Étapes de réalisation
+# 4. Fonctionnalités principales
 
-### 1. Exploration et profilage des données
-
-* Importation des fichiers CSV dans Power Query.
-* Analyse des types de données.
-* Détection des valeurs manquantes et des doublons.
-* Identification des valeurs aberrantes.
-
-### 2. Nettoyage et préparation des données
-
-* Gestion des valeurs manquantes.
-* Standardisation des formats de dates et de textes.
-* Correction des incohérences.
-* Création de nouvelles colonnes :
-
-  * Âge de l'élève
-  * Ancienneté de l'enseignant
-  * Taux de réalisation des cours
-  * Année d'inscription
-
-### 3. Modélisation des données
-
-Relations créées :
-
-* students[teacher_id] → teachers[teacher_id]
-* courses[student_id] → students[student_id]
-* courses[teacher_id] → teachers[teacher_id]
-
-Création d'une table calendrier (**DimDate**) pour les analyses temporelles.
-
-### 4. Mesures DAX
-
-* Total Élèves
-* Moyenne Générale
-* Taux de Réussite
-* Élèves à Risque
-* Heures Moyennes par Enseignant
-* Top Matières
-* Évolution des Inscriptions
+- Importer les données depuis plusieurs fichiers CSV.
+- Nettoyer et transformer les données avec Power Query.
+- Créer un modèle relationnel entre les différentes tables.
+- Développer des mesures et indicateurs avec DAX.
+- Visualiser les performances des élèves, des enseignants et des cours.
+- Produire des tableaux de bord interactifs pour l'analyse décisionnelle.
 
 ---
 
-## 📈 Tableaux de bord réalisés
+# 5. Technologies utilisées
 
-### 📄 Page 1 – Vue Élèves
+| Technologie | Utilisation dans le projet |
+|-------------|----------------------------|
+| Power BI Desktop | Création des tableaux de bord interactifs |
+| Power Query | Nettoyage et transformation des données |
+| DAX | Création des indicateurs et mesures |
+| Modélisation de données | Création des relations entre les tables |
+| Fichiers CSV | Source des données |
 
-**KPIs :**
+Nous avons utilisé **Power BI Desktop** pour créer le tableau de bord interactif.
 
-* Total élèves
-* Moyenne générale
-* Taux de réussite global
-* Nombre d'élèves à risque
+Nous avons utilisé **Power Query** pour nettoyer et transformer les données.
 
-**Visualisations :**
+Nous avons utilisé **DAX** pour calculer les indicateurs de performance.
 
-* Répartition des élèves par niveau et section
-* Évolution des inscriptions
-* Corrélation entre absences et moyenne générale
-* Répartition par statut
-
-### 👩‍🏫 Page 2 – Vue Enseignants
-
-**KPIs :**
-
-* Total enseignants
-* Ancienneté moyenne
-* Heures hebdomadaires moyennes
-* Note d'évaluation moyenne
-
-**Visualisations :**
-
-* Répartition par matière et type de contrat
-* Distribution des notes d'évaluation
-* Top 5 et Flop 5 enseignants
-
-### 📚 Page 3 – Vue Cours & Résultats
-
-**KPIs :**
-
-* Total cours
-* Taux de réalisation moyen
-* Taux de réussite par semestre
-
-**Visualisations :**
-
-* Réussite / Échec par matière
-* Évolution des notes moyennes
-* Matières avec moyenne supérieure ou égale à 12
+Nous avons utilisé la **modélisation de données** pour relier les différentes tables.
 
 ---
 
-## 🔍 Principaux Insights
+# 6. Installation et lancement
 
-* Identification des matières ayant le taux d'échec le plus élevé.
-* Détection des enseignants sous-chargés ou surchargés.
-* Identification des élèves à risque en fonction des absences et des notes.
-* Proposition de recommandations pour améliorer la réussite scolaire.
+## 6.1 Prérequis
 
----
+Pour utiliser ce projet, vous devez disposer de :
 
-## 📦 Livrables
-
-* Fichier Power BI (.pbix)
-* Présentation PowerPoint
-* Documentation du projet
+- Power BI Desktop
+- Windows 10 ou supérieur
+- Les fichiers CSV du projet
+- Git (optionnel)
 
 ---
 
-## 👩‍💻 Réalisé par
+## 6.2 Cloner le dépôt
 
-**Fatima Ezzahra**
-## 📊 Dashboard
-<img width="1315" height="741" alt="image" src="https://github.com/user-attachments/assets/1020f25e-0afb-47aa-9514-c0364969dd43" />
-<img width="1316" height="738" alt="image" src="https://github.com/user-attachments/assets/3e7bc018-0945-4817-a553-b50eeb33cf29" />
-<img width="1313" height="733" alt="image" src="https://github.com/user-attachments/assets/5031fa0d-5f4d-4de5-95e1-b8945d206d60" />
+```bash
+git clone https://github.com/fatimaezzahraderrag8-lang/Analyse-des-Donnees-Educatives-PowerBI
+```
 
+---
 
+## 6.3 Ouvrir le dossier
 
+```bash
+cd Analyse-des-Donnees-Educatives-PowerBI
+```
 
+---
 
+## 6.4 Installer les dépendances
+
+Aucune installation supplémentaire n'est nécessaire.
+
+Il suffit d'ouvrir le fichier **.pbix** avec **Power BI Desktop**.
+
+---
+
+## 6.5 Variables d'environnement
+
+Aucune variable d'environnement n'est nécessaire pour ce projet.
+
+---
+
+## 6.6 Lancer le projet
+
+Ouvrir le fichier :
+
+```text
+Analyse_Donnees_Educatives.pbix
+```
+
+avec **Power BI Desktop**.
+
+---
+
+# 7. Captures d'écran
+
+## Capture 1 – Vue Élèves
+
+Cette page présente les indicateurs liés aux performances académiques des élèves, notamment le nombre total d'élèves, la moyenne générale, le taux de réussite et les élèves à risque.
+
+<img width="1315" height="741" alt="Dashboard Élèves" src="https://github.com/user-attachments/assets/1020f25e-0afb-47aa-9514-c0364969dd43" />
+
+---
+
+## Capture 2 – Vue Enseignants
+
+Cette page présente la répartition des enseignants, leur ancienneté, leurs heures hebdomadaires ainsi que leur évaluation.
+
+<img width="1316" height="738" alt="Dashboard Enseignants" src="https://github.com/user-attachments/assets/3e7bc018-0945-4817-a553-b50eeb33cf29" />
+
+---
+
+## Capture 3 – Vue Cours et Résultats
+
+Cette page permet d'analyser les cours, les résultats des élèves et les taux de réussite par matière.
+
+<img width="1313" height="733" alt="Dashboard Cours" src="https://github.com/user-attachments/assets/5031fa0d-5f4d-4de5-95e1-b8945d206d60" />
+
+---
+
+# 8. Contribution personnelle
+
+J'ai réalisé l'ensemble du projet.
+
+Ma contribution principale a porté sur :
+
+- l'importation des données ;
+- le nettoyage et la transformation avec Power Query ;
+- la modélisation des données ;
+- la création des mesures DAX ;
+- la conception des tableaux de bord interactifs ;
+- l'analyse des résultats et des indicateurs de performance.
+
+---
+
+# 9. Difficultés rencontrées
+
+## Difficulté 1
+
+### Problème rencontré
+
+Certaines données contenaient des valeurs manquantes, des doublons et des formats incohérents.
+
+### Recherches / Tests
+
+J'ai analysé les données avec Power Query afin d'identifier les anomalies.
+
+### Solution
+
+J'ai nettoyé les données, supprimé les doublons, corrigé les formats et traité les valeurs manquantes.
+
+### Ce que j'ai appris
+
+Cette étape m'a permis d'améliorer mes compétences en préparation et qualité des données.
+
+---
+
+## Difficulté 2
+
+### Problème rencontré
+
+Créer des mesures DAX adaptées aux indicateurs demandés.
+
+### Recherches / Tests
+
+J'ai testé plusieurs formules DAX avant d'obtenir les résultats souhaités.
+
+### Solution
+
+J'ai créé des mesures optimisées pour calculer les KPI du tableau de bord.
+
+### Ce que j'ai appris
+
+J'ai renforcé mes compétences en langage DAX et en modélisation Power BI.
+
+---
+
+# 10. Améliorations possibles
+
+Dans une prochaine version, je pourrais :
+
+- ajouter davantage d'indicateurs de performance ;
+- intégrer une base de données SQL au lieu des fichiers CSV ;
+- automatiser l'actualisation des données ;
+- publier le tableau de bord sur Power BI Service.
+
+Ces améliorations permettraient de rendre le projet plus performant, plus dynamique et plus adapté à un contexte professionnel.
+
+---
+
+# 👩‍💻 Auteur
+
+**Fatima Ezzahra Derrag**
+
+Data Analyst | Power BI | SQL | Python | Business Intelligence
